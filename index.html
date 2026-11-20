@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login • simple form</title>
+  <style>
+    /* minimal, clean styling — just enough to look neat */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fb;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      max-width: 420px;
+      width: 100%;
+      border-radius: 28px;
+      padding: 2.5rem 2rem 2.2rem;
+      box-shadow: 0 20px 35px -8px rgba(0, 20, 30, 0.15), 0 8px 12px -4px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    /* welcome text */
+    .welcome h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0a1e2b;
+      margin-bottom: 0.3rem;
+    }
+
+    .welcome p {
+      color: #526b7a;
+      font-size: 0.98rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      border-left: 3px solid #d0e2f0;
+      padding-left: 0.9rem;
+      background: #f9fcff;
+      border-radius: 0 8px 8px 0;
+      padding: 0.7rem 1rem;
+    }
+
+    /* form */
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .input-group label {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #1f3b4c;
+      letter-spacing: 0.01em;
+    }
+
+    .input-group input {
+      padding: 0.85rem 1rem;
+      font-size: 1rem;
+      border: 1.5px solid #dbe4ec;
+      border-radius: 14px;
+      background: #ffffff;
+      transition: 0.2s ease;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .input-group input:focus {
+      border-color: #3b82c4;
+      box-shadow: 0 0 0 4px rgba(59, 130, 196, 0.15);
+    }
+
+    .input-group input::placeholder {
+      color: #9aaebd;
+      font-size: 0.94rem;
+    }
+
+    /* login button */
+    .login-btn {
+      background: #1e3b4f;
+      color: white;
+      border: none;
+      padding: 0.95rem 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      border-radius: 40px;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 8px 18px -6px rgba(28, 60, 80, 0.25);
+      border: 1px solid #2a4d62;
+    }
+
+    .login-btn:hover {
+      background: #142f3f;
+      transform: scale(1.01);
+      box-shadow: 0 12px 22px -8px rgba(20, 45, 60, 0.35);
+    }
+
+    .login-btn:active {
+      transform: scale(0.99);
+      background: #0e2431;
+    }
+
+    /* tiny extra detail (optional) */
+    .footer-note {
+      margin-top: 1.3rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #8fa6b5;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- some text (welcome / description) -->
+    <div class="welcome">
+      <h1>Welcome back</h1>
+      <p>
+        Sign in to your account. This is a simple login form — just text and fields.
+      </p>
+    </div>
+
+    <!-- login form (only form, no extra scripts) -->
+    <form class="login-form" action="#" method="post">
+      <div class="input-group">
+        <label for="username">Username or email</label>
+        <input type="text" id="username" name="username" placeholder="e.g., alex@example.com" autocomplete="username">
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password">
+      </div>
+
+      <button type="submit" class="login-btn">
+        Log in
+      </button>
+    </form>
+
+    <div class="footer-note">
+      No account? <span style="color:#3b82c4; font-weight:500;">Contact support</span>
+    </div>
+  </div>
+</body>
+</html>
